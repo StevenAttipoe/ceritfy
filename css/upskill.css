@@ -1,0 +1,14 @@
+.mainUpSkill{
+      width: 100vw;
+      display: flex;
+      flex-direction: row;
+}
+
+header{
+      height: 8vh;
+      width:100vw;
+}
+
+.tableUpSkill{
+      width: 100vw;
+}

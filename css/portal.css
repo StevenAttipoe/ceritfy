@@ -1,0 +1,70 @@
+.bi {
+      vertical-align: -.125em;
+      pointer-events: none;
+      fill: currentColor;
+}
+
+header{
+      height: 8vh;
+      width:100vw;
+}
+.portalSideBar{
+      width: 240px;
+}
+.mainPortal{
+      width: 100vw;
+      display: flex;
+      flex-direction: row;
+}
+
+.firstRowGridLayout{
+      width: 10%;
+      padding-top: 2rem;
+      padding-left: 20%;
+      display: grid;
+      grid-gap: 0.2rem;
+      grid-template-columns: repeat(4, 1fr);
+      margin-left: 1rem;
+}
+
+.firstRowGrid{
+      height: 10rem; 
+      width: 15rem;
+      overflow: hidden;
+      background-color: #ffff;
+      display: flex;
+      flex-direction: column;
+}
+
+.portalStatsGridLayout{
+      width: 10%;
+      padding-top: 2rem;
+      padding-left: 6%;
+      display: grid;
+      grid-gap: 0.2rem;
+      grid-template-columns: repeat(2, 1fr);
+      margin-left: 1rem;
+}
+
+
+.cardTitle{
+      font-weight: normal;
+      font-family: "Times New Roman", Times, serif;
+}
+.cardFigure{
+      padding-top: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+}
+.cardPercent{
+    color: green;
+    font-weight: 700;  
+    text-align: center;
+}
+
+.cardInfo{
+      margin-top: 3rem;
+      text-align: center;
+      font-family: "Times New Roman", Times, serif;
+}
