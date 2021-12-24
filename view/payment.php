@@ -86,7 +86,7 @@
                 </thead>
                 <tbody>
                     <?php
-                      include('../controller/mainController.php');
+                      include_once "/var/www/html/certify/controller/mainController.php";
                       $staff = getPayment();
 
                       foreach($staff as $value){
