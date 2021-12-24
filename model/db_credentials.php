@@ -3,7 +3,7 @@
 //Database credentials
 define("servername","localhost");
 define("username","root");
-define("password","admin");
+define("password","");
 define("dbname","certificatedb");
 
 ?>
