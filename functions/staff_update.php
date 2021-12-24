@@ -1,6 +1,6 @@
 <?php
-include_once __DIR__.'\..\controller\mainController.php';
-    $conn = new mysqli('localhost', 'root', '', 'certificatedb');
+include_once "/var/www/html/certify/controller/mainController.php";
+$conn = new mysqli('localhost', 'root', '', 'certificatedb');
     $id = $_GET['id'];
     $staffName= $_POST['updateName'];
     $staffEmail = $_POST['updateEmail'];

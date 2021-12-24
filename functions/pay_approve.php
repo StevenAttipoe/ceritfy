@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__.'\..\controller\mainController.php';
+include_once "/var/www/html/certify/controller/mainController.php";
 
     $pay = approvePay($_GET['id']);
     if($pay){

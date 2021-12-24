@@ -1,6 +1,9 @@
 <?php
 //connect to employee class
-include('certificate_class.php');
+//include('certificate_class.php');
+spl_autoload_register(function($class){
+    require_once('certificate_class.php');
+});
 
 // Inserting a new staff
 function createStaff($employeeID,$employeeName,$employeePassword1,$employeeEmail,$employeeDepartment){
