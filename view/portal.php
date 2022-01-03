@@ -76,18 +76,51 @@
                   <div class="firstRowGridLayout">
                         <div class="firstRowGrid">
                               <h4 class="cardInfo">Staff Number</h4>
-                              <h6 class="cardFigure">100</h6>
+                              <h6 class="cardFigure">
+                                    <?php
+                                          // Create connection
+                                          $conn = new mysqli("localhost", "root", "", "certificatedb");
+                                          if ($conn->connect_error) {
+                                                echo "connection Failed: " . $conn->connect_error;
+                                            } else{
+                                                $numberOfStaffQuery = "SELECT COUNT(Staff_ID) FROM staff";
+                                                $result = $conn->query($numberOfStaffQuery);
+                                            }
+                                            $data=mysqli_fetch_assoc($result);
+                                            echo $data['COUNT(Staff_ID)'];
+                                            ?>
+                              </h6>
                         </div>
                         <div class="firstRowGrid">
-                              <h5 class="cardInfo">Number of Staff Certified</h5>
-                              <h5 class="cardFigure">70</h5>
-                              <h5 class="cardPercent">70%</h5>
+                              <h5 class="cardInfo">Number of Staff Approved for Certification</h5>
+                              <h5 class="cardFigure">
+                                    <?php
+                                          if ($conn->connect_error) {
+                                                echo "connection Failed: " . $conn->connect_error;
+                                            } else{
+                                                $approvedStaffQuery = 'SELECT COUNT(Staff_ID) FROM payment WHERE Payment_Status = "Successful" ';
+                                                $result = $conn->query($approvedStaffQuery);
+                                            }
+                                            $data=mysqli_fetch_assoc($result);
+                                            echo $data['COUNT(Staff_ID)'];
+                                    ?>
+                              </h5>
                         </div>
                         <div class="firstRowGrid">
                               <h5 class="cardInfo">Payment Funds</h5>
-                              <h5 class="cardFigure">Ghc 10,200.00</h5>
-                              <h5 class="cardPercent">10%</h5>
-                              <span class="cardInfo">Increase Rate</span>
+                              <h5 class="cardFigure">
+                                    <?php
+                                          if ($conn->connect_error) {
+                                                echo "connection Failed: " . $conn->connect_error;
+                                            } else{
+                                                $totalPaymentQuery = 'SELECT SUM(Total_Amount) FROM payment WHERE Payment_Status = "Successful"';
+                                                $result = $conn->query($totalPaymentQuery);
+                                            }
+                                            $data=mysqli_fetch_assoc($result);
+                                            echo "Ghc " .$data['SUM(Total_Amount)'];
+                                    ?>
+                                    
+                              </h5>
                         </div>
 
                   </div>

@@ -105,8 +105,12 @@
                                           Please enter your Certificate Name.
                                           </div>
                                     </div>
-                                         
+				    <div>
+                                        <h5> For Demo purposes only </h5>
+				    	<h6>Staff ID:100, Certificate ID:237, Certificate Name: AZ-302</h6>
+					<h6>Staff ID:9543, Certificate ID:93822, Certificate Name: AZ-303 </h6>
                                     </div>
+				    </div>
                                     <br> <br>
                                           <button class="w-100 btn btn-primary btn-lg" type="submit">Submit</button>
                                     </div>

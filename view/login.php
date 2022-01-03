@@ -23,7 +23,7 @@
                 <label for="inputEmail" class="form-label">Email</label>
                 <input type="email" class="form-control" name="inputEmail" required>
                 <div class="invalid-feedback">
-                        Please enter your full name.
+                        Please enter a valid email.
                   </div>
             </div>
             <div class="col-12">
@@ -33,6 +33,10 @@
                         Please enter your password.
                   </div>
             </div>
+		<div>
+			<h5>Admin Credentials (For Demo purposes only)</h5>
+			<h6>Email: root@admin.com 
+			<h6>Password: admin</h6>
            
             <div class="col-12 account">
                 <button type="submit" class="btn create_account btn-lg btn-primary">Log In</button>

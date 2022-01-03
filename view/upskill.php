@@ -87,9 +87,9 @@
                 <tbody>
                     <?php
                       include_once "/var/www/html/certify/controller/mainController.php";
-                      $staff = getStaff();
+                      $workers = getStaff();
 
-                      foreach($staff as $value){
+                      foreach($workers  as $value){
                   ?>
                       <?= "<tr> <th>" . $value['Staff_ID'] . "</th> <td>" . $value['fullName'] ."</td> <td>". $value['email']  ."</th> <td>" . $value['department'] . "</td>"?>  
                         <td>

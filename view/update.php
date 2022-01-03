@@ -25,8 +25,14 @@
                     <input type="email" class="form-control" name="updateEmail">
                 </div>
                 <div class="col-12">
-                    <label for="inputDepartment" class="form-label">Department</label>
-                    <input type="text" class="form-control" name="updateDepartment">
+                  <label class="form-label">Department</label>
+                  <select class="form-select"  name="updateDepartment" required>
+                        <option selected disabled value="">Choose</option>
+                        <option>Frontend</option>
+                        <option>Backend</option>
+                        <option>Cloud</option>
+                        <option>DevOps</option>
+                  </select>
                 </div>
                 <br><br>
             <input type="submit" class="btn btn-primary" name="submitBtn" value="Update" />

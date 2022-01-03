@@ -76,14 +76,13 @@
                     foreach($profiles as $key => $value){
                   ?>
                         <?= '<div class="col-lg-4 col-md-6 col-sm-12">
-                                <div class="card" style="width: 18rem;">
-                                <a href="" class="btn btn-primary btn-custom" style="margin-left:13rem;">Apply</a> 
+                                <div class="card" style="width: 18rem;"> 
                                     <img src="../img/account.png" class="card-img-top icon" alt="profile icon" style="height:12rem; width:12rem; margin-left:3rem;"></img>
                                         <div class="card-body">
                                             <h5 class="card-title">'. $value['job_title'] .'</h5>
-                                            <h6 class="card-text">'. $value['job_id'] .'</h6>
-                                            <h6 class="card-text">'. 'Ghc'.$value['salary'] .'</h6>
-                                            <h6 class="card-text">'. $value['skills_set'] .'</h6>
+                                            <h6 class="card-text">'. 'Job ID: '. $value['job_id'] .'</h6>
+                                            <h6 class="card-text">'. 'Salary: Ghc'.$value['salary'] .'</h6>
+                                            <h6 class="card-text">'. 'Required Certification(s): '.$value['skills_set'] .'</h6>
                                         </div>
                                 </div>
                                 <br> <br>

@@ -6,14 +6,8 @@ $conn = new mysqli('localhost', 'root', '', 'certificatedb');
     $staffEmail = $_POST['updateEmail'];
     $staffDepartment = $_POST['updateDepartment'];
 
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    $sql = "UPDATE Staff SET fullName='$staffName' ,  email='$staffEmail' , department='$staffDepartment' WHERE Staff_ID='$id' ";
-    if(mysqli_query($conn, $sql)){
+    $updatee = updateStaff($id,$staffName,$staffEmail,$staffDepartment);
+    if($updatee){
     echo "<script language='javascript'>;
         alert('Update Successful!');
         window.location.href='../view/upskill.php';
@@ -21,6 +15,7 @@ $conn = new mysqli('localhost', 'root', '', 'certificatedb');
     }else{
         echo "<script language='javascript'>;
         alert('Update Unsuccessful!');
+        window.location.href='../view/update.php';
         </script>";
     }
 ?>

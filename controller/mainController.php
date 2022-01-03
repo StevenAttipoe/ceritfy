@@ -151,12 +151,12 @@ function approvePay($transNo){
 }
 
 
-function updateStaff($id, $employeeName,$employeeEmail,$employeeDepartment){
+function updateStaff($id, $staffName,$staffEmail,$staffDepartment){
     // Create new employee object
-    $employee = new Certificate;
+    $staff = new Certificate;
 
     // Run query
-    $runQuery = $employee->editEmployee($id, $employeeName,$employeeEmail,$employeeDepartment);
+    $runQuery = $staff->update($id, $staffName,$staffEmail,$staffDepartment);
 
     if($runQuery){
         return $runQuery;

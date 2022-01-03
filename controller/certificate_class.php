@@ -5,7 +5,7 @@ require('../model/db_connect.php');
 class Certificate extends connection {
     public function create($employeeID,$employeeName,$employeePassword1,$employeeEmail,$employeeDepartment){
         // sql query
-        $sql = "INSERT into Staff(Staff_ID,fullName,pswd,email,department) values ('$employeeID','$employeeName','$employeePassword1','$employeeEmail','$employeeDepartment')";
+        $sql = "INSERT into staff(Staff_ID,fullName,pswd,email,department) values ('$employeeID','$employeeName','$employeePassword1','$employeeEmail','$employeeDepartment')";
 
         // run query
         return $this->db_query($sql);
@@ -21,7 +21,7 @@ class Certificate extends connection {
 
     public function loginCheck($employeeEmail,$employeePassword){
         //sql query
-        $sql = "SELECT Staff_ID FROM Staff WHERE email = '$employeeEmail' and pswd = '$employeePassword' ";
+        $sql = "SELECT Staff_ID FROM staff WHERE email = '$employeeEmail' and pswd = '$employeePassword' ";
          
         //run query 
         return $this->db_query($sql);
@@ -29,7 +29,7 @@ class Certificate extends connection {
 
     public function getAllStaff(){
         //sql query
-        $sql = "SELECT Staff_ID,fullName,email,department FROM Staff";
+        $sql = "SELECT Staff_ID,fullName,email,department FROM staff";
 
         //run query
         return $this->db_query($sql);
@@ -72,11 +72,18 @@ class Certificate extends connection {
         return $this->db_query($sql);
     }
 
+    public function update($id, $staffName,$staffEmail,$staffDepartment){
+        // sql query
+        $sql = "UPDATE staff SET fullName='$staffName' ,  email='$staffEmail' , department='$staffDepartment' WHERE Staff_ID='$id' ";
+        // run query
+        return $this->db_query($sql);
+    }
+
     
 
     public function delete($id){
         // sql query
-        $sql = "DELETE FROM Staff WHERE Staff_ID = '$id' ";
+        $sql = "DELETE FROM staff WHERE Staff_ID = '$id' ";
 
         // run query
         return $this->db_query($sql);
