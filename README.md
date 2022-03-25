@@ -1,2 +1,2 @@
-# ceritfy
+# Ceritfy
 Certificate Management System
