@@ -6,6 +6,15 @@ Employee Management - The system allows for the addition, modification, and dele
 Certification Management - The system provides the ability to add, modify, and delete certification types, along with the expiration period for each type.
 Certification Tracking - The system tracks the expiration dates of each certification for all employees and generates reports on upcoming and expired certifications.
 
+## Screenshots
+![Screenshot1](./img/c1.png)
+
+![Screenshot2](./img/c2.png)
+
+![Screenshot3](./img/c3.png)
+
+![Screenshot4](./img/c4.png)
+
 
 ## Requirements
 PHP 7.0 or later
